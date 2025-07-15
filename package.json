@@ -1,0 +1,27 @@
+{
+  "name": "taller-mecanico-landing",
+  "version": "1.0.0",
+  "description": "Landing web para taller mecánico en Chile con despliegue automático en AWS S3",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,html --report-unused-disable-directives --max-warnings 0"
+  },
+  "keywords": [
+    "landing-page",
+    "taller-mecanico",
+    "aws-s3",
+    "vite",
+    "responsive"
+  ],
+  "author": "Taller Mecánico Chile",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-plugin-html": "^7.1.0",
+    "terser": "^5.43.1",
+    "vite": "^5.0.0"
+  }
+}
