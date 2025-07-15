@@ -30,8 +30,15 @@ jobs:
           name: staging-build
           path: dist/
           
-      - name: Staging build completed
+      - name: Deploy to GitHub Pages Staging
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          destination_dir: staging
+          keep_files: true
+          
+      - name: Staging deployment completed
         run: |
-          echo "✅ Staging build completed successfully!"
-          echo "📦 Artifacts uploaded for review"
-          echo "🔗 Ready for manual deployment or further testing"
+          echo "✅ Staging deployed to GitHub Pages!"
+          echo "🔗 URL: https://juanpalacioscmd.github.io/taller-mecanico-landing/staging/"
