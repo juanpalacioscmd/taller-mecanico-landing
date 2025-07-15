@@ -13,6 +13,8 @@ Landing page moderna y responsive para taller mecánico en Chile, con despliegue
 
 **👉 [Ver sitio web](https://juanpalacioscmd.github.io/taller-mecanico-landing/)**
 
+*Sitio desplegado automáticamente con GitHub Pages y GitHub Actions*
+
 ## 🚀 Características
 
 - ✅ Diseño responsive optimizado para móviles
