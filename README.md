@@ -1,6 +1,17 @@
 # Taller Mecánico Landing Web
 
-Landing page moderna y responsive para taller mecánico en Chile, con despliegue automático en AWS S3.
+[![Deploy to GitHub Pages](https://github.com/juanpalacioscmd/taller-mecanico-landing/actions/workflows/deploy.yml/badge.svg)](https://github.com/juanpalacioscmd/taller-mecanico-landing/actions/workflows/deploy.yml)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://juanpalacioscmd.github.io/taller-mecanico-landing/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.19-646CFF?logo=vite)](https://vitejs.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![CSS3](https://img.shields.io/badge/CSS3-Modern-1572B6?logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Responsive](https://img.shields.io/badge/Design-Responsive-blue)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+
+Landing page moderna y responsive para taller mecánico en Chile, con despliegue automático en GitHub Pages y preparado para AWS S3.
+
+## 🌐 Demo en Vivo
+
+**👉 [Ver sitio web](https://juanpalacioscmd.github.io/taller-mecanico-landing/)**
 
 ## 🚀 Características
 

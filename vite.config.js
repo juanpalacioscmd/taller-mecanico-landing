@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  // Base path for GitHub Pages
+  base: '/taller-mecanico-landing/',
+  
   // Configuración optimizada para producción
   build: {
     outDir: 'dist',
