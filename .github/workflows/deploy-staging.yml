@@ -4,24 +4,10 @@ on:
   push:
     branches: [ develop ]
 
-# Sets permissions for staging deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment
-concurrency:
-  group: "staging"
-  cancel-in-progress: false
-
 jobs:
-  # Build and deploy to staging
-  build-and-deploy-staging:
+  # Build and test staging
+  build-staging:
     runs-on: ubuntu-latest
-    environment:
-      name: staging
-      url: https://juanpalacioscmd.github.io/taller-mecanico-landing/staging/
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,15 +22,16 @@ jobs:
         run: npm ci
         
       - name: Build for staging
-        run: |
-          # Create staging build with different base path
-          sed -i "s|base: '/taller-mecanico-landing/',|base: '/taller-mecanico-landing/staging/',|g" vite.config.js
-          npm run build
+        run: npm run build
         
-      - name: Deploy to staging branch
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload staging artifacts
+        uses: actions/upload-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages-staging
-          destination_dir: staging
+          name: staging-build
+          path: dist/
+          
+      - name: Staging build completed
+        run: |
+          echo "✅ Staging build completed successfully!"
+          echo "📦 Artifacts uploaded for review"
+          echo "🔗 Ready for manual deployment or further testing"
