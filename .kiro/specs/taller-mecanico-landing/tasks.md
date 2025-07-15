@@ -63,44 +63,58 @@
   - Implementar atributos de accesibilidad ARIA
   - _Requisitos: 5.1, 5.4_
 
-- [ ] 10. Configurar infraestructura AWS con Terraform
-  - Crear configuración de Terraform para S3 bucket
+- [x] 10. Implementar pipeline de CI/CD con GitHub Actions
+  - Crear workflow de GitHub Actions para build automático
+  - Configurar deployment automático a GitHub Pages en push a main
+  - Implementar workflow de staging para branch develop
+  - Configurar notificaciones de estado del deployment
+  - _Requisitos: 4.1, 4.2, 4.3, 4.4_
+
+- [ ] 11. Crear configuración de infraestructura AWS con Terraform
+  - Crear archivos de configuración de Terraform para S3 bucket
   - Configurar S3 bucket para hosting web estático
   - Implementar CloudFront distribution con configuración optimizada
   - Configurar Certificate Manager para SSL
   - _Requisitos: 3.1, 3.3, 3.4_
 
-- [ ] 11. Configurar Route 53 y dominio personalizado
+- [ ] 12. Configurar Route 53 y dominio personalizado
   - Crear configuración de Route 53 en Terraform
   - Configurar registros DNS para dominio personalizado
   - Implementar redirección de www a dominio principal
   - Configurar health checks para monitoreo
   - _Requisitos: 3.3_
 
-- [ ] 12. Implementar pipeline de CI/CD con GitHub Actions
-  - Crear workflow de GitHub Actions para build automático
-  - Configurar deployment automático a S3 en push a main
+- [ ] 13. Migrar CI/CD de GitHub Pages a AWS S3
+  - Actualizar workflow para deployment a S3 en lugar de GitHub Pages
+  - Configurar credenciales AWS en GitHub Secrets
   - Implementar invalidación automática de CloudFront cache
-  - Configurar notificaciones de estado del deployment
+  - Configurar variables de entorno para diferentes ambientes
   - _Requisitos: 4.1, 4.2, 4.3, 4.4_
 
-- [ ] 13. Configurar variables de entorno y secretos
-  - Configurar GitHub Secrets para credenciales AWS
-  - Crear archivo de configuración para variables de entorno
-  - Implementar configuración separada para desarrollo y producción
+- [ ] 14. Configurar Formspree para formulario de contacto
+  - Crear cuenta en Formspree y obtener endpoint
   - Configurar endpoint de Formspree como variable de entorno
-  - _Requisitos: 4.1, 4.2_
+  - Actualizar función submitToFormspree con endpoint real
+  - Probar funcionalidad completa del formulario
+  - _Requisitos: 2.1, 2.2, 2.3, 2.4_
 
-- [ ] 14. Implementar testing automatizado
+- [ ] 15. Implementar testing automatizado
   - Crear tests de validación HTML con validator
   - Implementar tests de build exitoso en CI
   - Configurar Lighthouse CI para pruebas de rendimiento
   - Crear tests de formulario de contacto
   - _Requisitos: 5.1, 5.4_
 
-- [ ] 15. Crear documentación del proyecto
+- [ ] 16. Crear documentación del proyecto
   - Escribir README.md con instrucciones de setup
   - Documentar proceso de deployment y configuración AWS
   - Crear guía de mantenimiento y actualización de contenido
   - Documentar variables de configuración del sitio
   - _Requisitos: 4.1, 4.2_
+
+- [ ] 17. Optimizaciones finales y mejoras
+  - Agregar imágenes reales del taller en lugar de placeholders
+  - Configurar dominio personalizado real
+  - Implementar analytics y tracking
+  - Realizar pruebas finales de rendimiento y accesibilidad
+  - _Requisitos: 5.1, 5.3, 5.4_

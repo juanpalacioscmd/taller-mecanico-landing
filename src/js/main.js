@@ -764,6 +764,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add loading complete class to body
   document.body.classList.add('loaded');
   
+  // Show staging banner only in staging environment
+  const stagingBanner = document.getElementById('staging-banner');
+  if (stagingBanner && window.location.pathname.includes('/staging/')) {
+    stagingBanner.style.display = 'block';
+  } else if (stagingBanner) {
+    stagingBanner.style.display = 'none';
+  }
+  
   console.log('Taller Mecánico AutoFix - Website loaded successfully! 🔧');
 });
 
