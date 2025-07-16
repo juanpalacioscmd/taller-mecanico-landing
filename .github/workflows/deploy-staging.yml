@@ -1,17 +1,11 @@
-name: Deploy to Staging (Develop)
+name: Build Staging (Develop)
 
 on:
   push:
     branches: [ develop ]
 
-# Sets permissions for GitHub Pages deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
-  # Build and test staging
+  # Build and validate staging
   build-staging:
     runs-on: ubuntu-latest
     steps:
@@ -35,16 +29,15 @@ jobs:
         with:
           name: staging-build
           path: dist/
+          retention-days: 7
           
-      - name: Deploy to GitHub Pages Staging
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          destination_dir: staging
-          keep_files: true
-          
-      - name: Staging deployment completed
+      - name: Staging build completed
         run: |
-          echo "✅ Staging deployed to GitHub Pages!"
-          echo "🔗 URL: https://juanpalacioscmd.github.io/taller-mecanico-landing/staging/"
+          echo "✅ Staging build completed successfully!"
+          echo "📦 Build artifacts available for download"
+          echo "🔗 To deploy staging: merge develop → main"
+          echo ""
+          echo "Staging changes ready for review:"
+          echo "- Banner de staging agregado"
+          echo "- Estilos y animaciones actualizados"
+          echo "- JavaScript mejorado"
