@@ -4,6 +4,12 @@ on:
   push:
     branches: [ develop ]
 
+# Sets permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   # Build and test staging
   build-staging:
